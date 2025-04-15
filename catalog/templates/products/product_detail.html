@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <h1>{{ product.title }}</h1>
+    <div class="col-md-4">
+        <h5>About the Product:</h5>
+        <p>{{ product.description }}</p>
+        <br>
+        <h5>Price: {{ product.price }}</h5>
+    </div>
+{% endblock page_content %}
