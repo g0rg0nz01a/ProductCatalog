@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-	<h1>Products</h1>
-    <div class="row">
-    {% for product in products %}
-    	<div class="col-md-4">
-            <div class="card mb-2">
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.title }}</h5>
-                    <p class="card-text">{{ product.description }}</p>
-                    <a href="{% url 'product_detail' product.pk %}" class="btn-primary">More Details</a>
+    <div class="contianer py-5">
+        <h1 class="text-center mb-5">Products</h1>
+        <div class="row g-4">
+        {% for product in products %}
+    	    <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm h-100">
+                    <img src="{{ product.image }}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.title }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary btn-sm">More Details</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
+
 
     </div>
 {% endblock %}

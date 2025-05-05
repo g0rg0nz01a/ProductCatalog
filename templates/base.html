@@ -7,8 +7,32 @@
     {% endblock title %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
           rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .product-img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
 </head>
-<body class="container">
+<body class="container py-5">
 {% block page_content %}
 {% endblock page_content%}
 </body>
